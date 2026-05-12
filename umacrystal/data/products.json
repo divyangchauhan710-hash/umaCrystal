@@ -26,7 +26,7 @@
             },
             {
               "type": "video",
-              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "url": "/client-media/sample-video.mp4",
               "thumbnail": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Video"
             }
           ],

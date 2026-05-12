@@ -149,7 +149,7 @@ export default function Navbar({ categories = [] }) {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center ml-4">
             <a
-              href="https://wa.me/910000000000"
+              href="https://wa.me/919327105966"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 group"
@@ -244,7 +244,7 @@ export default function Navbar({ categories = [] }) {
 
           <div className="pt-6 pb-4">
             <a
-              href="https://wa.me/910000000000"
+              href="https://wa.me/919327105966"
               target="_blank"
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center space-x-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-5 py-4 rounded-xl font-bold transition-all shadow-md"

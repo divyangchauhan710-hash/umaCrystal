@@ -28,7 +28,7 @@ export default function Footer({ categories = [] }) {
               Premium gemstones, healing crystals and jewellery — crafted by nature, curated for you. We source the finest stones from trusted origins.
             </p>
             <div className="flex space-x-4">
-              <a href="https://wa.me/910000000000" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
+              <a href="https://wa.me/919327105966" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
                 <WhatsAppIcon className="w-5 h-5 text-white" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
@@ -63,11 +63,15 @@ export default function Footer({ categories = [] }) {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-gold shrink-0" />
-                <span className="text-sm">+91 00000 00000</span>
+                <span className="text-sm">+91 93271 05966</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 text-gold shrink-0" />
                 <span className="text-sm">contact@umacrystal.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <span className="w-5 h-5 text-gold shrink-0 flex items-center justify-center font-bold text-xs border border-gold rounded-sm">G</span>
+                <span className="text-sm">GSTIN: 24AAACU1234A1Z5</span>
               </div>
             </div>
           </div>

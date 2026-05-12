@@ -131,7 +131,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50"
-                    placeholder="+91 00000 00000"
+                    placeholder="+91 93271 05966"
                   />
                 </div>
                 
@@ -183,7 +183,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-1">Phone</h4>
-                  <p className="text-gray-600">+91 00000 00000</p>
+                  <p className="text-gray-600">+91 93271 05966</p>
                 </div>
               </div>
               
@@ -210,11 +210,21 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
+              
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm shrink-0 font-bold">
+                  G
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-1">GST Number</h4>
+                  <p className="text-gray-600">24AAACU1234A1Z5</p>
+                </div>
+              </div>
             </div>
             
             <div className="mt-12 pt-8 border-t border-gray-200">
               <a 
-                href="https://wa.me/910000000000" 
+                href="https://wa.me/919327105966" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium transition-colors flex justify-center items-center shadow-md hover:shadow-lg"

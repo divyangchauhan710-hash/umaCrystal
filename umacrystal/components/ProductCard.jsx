@@ -10,7 +10,7 @@ export default function ProductCard({ product }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const getWhatsAppLink = (message) => {
-    return `https://wa.me/910000000000?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/919327105966?text=${encodeURIComponent(message)}`;
   };
 
   // Handle both old single-image format and new multi-media format

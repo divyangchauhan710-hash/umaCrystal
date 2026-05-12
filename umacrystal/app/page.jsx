@@ -189,7 +189,7 @@ export default async function Home() {
               Contact Us Now
             </Link>
             <a 
-              href="https://wa.me/910000000000" 
+              href="https://wa.me/919327105966" 
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-green-500 text-white rounded-full font-bold hover:bg-green-600 transition-all shadow-lg w-full sm:w-auto flex items-center justify-center"
