@@ -1,3 +1,5 @@
+"use client";
+
 import CategoryCard from "@/components/CategoryCard";
 import { useEffect, useState } from "react";
 
