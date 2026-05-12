@@ -8,28 +8,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logoImg from "../public/logo.jpeg";
 
-export default function Navbar() {
+export default function Navbar({ categories = [] }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
-  const [categories, setCategories] = useState([]);
   const pathname = usePathname();
-
-  useEffect(() => {
-    async function fetchCategories() {
-      try {
-        const response = await fetch('/api/products');
-        const data = await response.json();
-        setCategories(data.categories || []);
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-        setCategories([]);
-      }
-    }
-
-    fetchCategories();
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

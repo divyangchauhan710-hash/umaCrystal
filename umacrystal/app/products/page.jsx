@@ -7,8 +7,8 @@ export const metadata = {
 };
 
 export default async function ProductsPage() {
-  const data = await getProducts();
-  const categories = data.categories || [];
+  const data = (await getProducts()) ?? { categories: [] };
+  const categories = data.categories ?? [];
 
   return (
     <div className="bg-background min-h-screen pb-20">

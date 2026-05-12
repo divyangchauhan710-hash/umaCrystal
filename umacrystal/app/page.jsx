@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Leaf, Truck, Award, ArrowRight } from "lucide-react";
@@ -7,49 +5,15 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import CategoryCard from "@/components/CategoryCard";
 import ProductCard from "@/components/ProductCard";
 import logoImg from "../public/logo.jpeg";
-import { useEffect, useState } from "react";
+import { getProducts } from "@/lib/sheetsService";
 
-export default function Home() {
-  const [categories, setCategories] = useState([]);
-  const [featuredProducts, setFeaturedProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const response = await fetch('/api/products');
-        const data = await response.json();
-        setCategories(data.categories || []);
-
-        // Get featured products (first product from each category up to 4)
-        const featured = (data.categories || [])
-          .slice(0, 4)
-          .map(cat => cat.products[0])
-          .filter(Boolean);
-        setFeaturedProducts(featured);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-        // Fallback to empty arrays
-        setCategories([]);
-        setFeaturedProducts([]);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchProducts();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading products...</p>
-        </div>
-      </div>
-    );
-  }
+export default async function Home() {
+  const data = (await getProducts()) ?? { categories: [] };
+  const categories = data.categories ?? [];
+  const featuredProducts = categories
+    .slice(0, 4)
+    .map((cat) => cat.products[0])
+    .filter(Boolean);
 
   const features = [
     { icon: <Leaf className="w-8 h-8" />, title: "100% Natural Stones", desc: "Authentic gems straight from nature" },

@@ -5,7 +5,7 @@ import { getProducts } from "@/lib/sheetsService";
 
 export default async function CategoryPage({ params }) {
   const { category } = params;
-  const data = await getProducts();
+  const data = (await getProducts()) ?? { categories: [] };
   const categoryData = data.categories?.find(c => c.id === category);
 
   if (!categoryData) {

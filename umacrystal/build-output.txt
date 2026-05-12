@@ -1,0 +1,501 @@
+﻿
+> umacrystal@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+node.exe : Error fetching from Google Sheets: Error: Sheets API error: 403
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error fetching ... API error: 403 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async Object.c [as generateStaticParams] (C:\Users\DIVYANG\OneDrive\umaC
+rystal\umacrystal\.next\server\app\products\[category]\page.js:1:6400)
+    at async buildParams (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\node_
+modules\next\dist\build\utils.js:1026:40)
+    at async C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\node_modules\next\
+dist\build\utils.js:1043:33
+    at async C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\node_modules\next\
+dist\build\utils.js:1178:114
+    at async Span.traceAsyncFn (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal
+\node_modules\next\dist\trace\trace.js:154:20)
+   Generating static pages (0/17) ...
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at s (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\app\api\
+products\route.js:1:1667)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async i (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:3038)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\page.js:1:2363)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+   Generating static pages (4/17) 
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at s (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\app\api\
+products\route.js:1:1667)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async i (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:3038)
+    at async u (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:579)
+    at async C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\node_modules\next\
+dist\compiled\next-server\app-route.runtime.prod.js:6:38411
+    at async e_.execute (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\node_m
+odules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:27880)
+    at async e_.handle (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\node_mo
+dules\next\dist\compiled\next-server\app-route.runtime.prod.js:6:39943)
+    at async exportAppRoute (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\no
+de_modules\next\dist\export\routes\app-route.js:77:26)
+    at async exportPageImpl (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\no
+de_modules\next\dist\export\worker.js:175:20)
+    at async Span.traceAsyncFn (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal
+\node_modules\next\dist\trace\trace.js:154:20)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at s (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\app\api\
+products\route.js:1:1667)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async i (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:3038)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\page.js:1:2363)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+   Generating static pages (8/17) 
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async A (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\page.js:1:3983)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+   Generating static pages (12/17) 
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at s (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\app\api\
+products\route.js:1:1667)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async i (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:3038)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async A (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\page.js:1:3983)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at s (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\app\api\
+products\route.js:1:1667)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async i (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:3038)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at s (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\app\api\
+products\route.js:1:1667)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async i (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:3038)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\products\[category]\page.js:1:5658)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at s (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\app\api\
+products\route.js:1:1667)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async i (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ap
+p\api\products\route.js:1:3038)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+ Γ£ô Generating static pages (17/17)
+   Finalizing page optimization ...
+   Collecting build traces ...
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+Error fetching from Google Sheets: Error: Sheets API error: 403
+    at l (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\chunks\1
+54.js:1:18142)
+    at process.processTicksAndRejections 
+(node:internal/process/task_queues:104:5)
+    at async o (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:19513)
+    at async p (C:\Users\DIVYANG\OneDrive\umaCrystal\umacrystal\.next\server\ch
+unks\154.js:1:16059)
+
+Route (app)                              Size     First Load JS
+Γöî Γùï /                                    605 B           106 kB
+Γö£ Γùï /_not-found                          873 B          88.3 kB
+Γö£ Γùï /about                               195 B           102 kB
+Γö£ Γùï /api/products                        0 B                0 B
+Γö£ Γùï /contact                             4.67 kB        92.1 kB
+Γö£ Γùï /products                            176 B          96.3 kB
+Γöö ΓùÅ /products/[category]                 1.33 kB         107 kB
+    Γö£ /products/gemstone-bracelets
+    Γö£ /products/rudraksha
+    Γö£ /products/gemstone-healing-wand
+    Γöö [+5 more paths]
++ First Load JS shared by all            87.4 kB
+  Γö£ chunks/117-d1eaba24ca3f60a4.js       31.9 kB
+  Γö£ chunks/fd9d1056-03eebc0f1463ed16.js  53.6 kB
+  Γöö other shared chunks (total)          1.9 kB
+
+
+Γùï  (Static)  prerendered as static content
+ΓùÅ  (SSG)     prerendered as static HTML (uses getStaticProps)
+

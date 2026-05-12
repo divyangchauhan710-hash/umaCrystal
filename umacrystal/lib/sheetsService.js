@@ -15,36 +15,36 @@ const SHEET_ID = process.env.NEXT_PUBLIC_SHEET_ID;
  */
 export async function getProductsFromSheets() {
   if (!SHEETS_API_KEY || !SHEET_ID) {
-    console.warn("Google Sheets not configured. Using fallback data.");
+    console.warn("Google Sheets is not configured. Falling back to local product data.");
     return null;
   }
 
+  const range = encodeURIComponent("'Products'!A:Z");
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${SHEETS_API_KEY}`;
+
   try {
-    // Fetch data from Google Sheets API (first sheet)
-    const response = await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/'Products'?key=${SHEETS_API_KEY}`
-    );
+    const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error(`Sheets API error: ${response.status}`);
+      const message = `Sheets API error: ${response.status} ${response.statusText}`;
+      console.warn(message);
+      return null;
     }
 
     const data = await response.json();
     const rows = data.values || [];
 
     if (rows.length < 2) {
-      console.warn("Google Sheet is empty or not properly formatted");
+      console.warn("Google Sheet is empty or not properly formatted. Falling back to local product data.");
       return null;
     }
 
-    // Parse headers
     const headers = rows[0];
     const dataRows = rows.slice(1);
 
-    // Transform sheet data to product format
     return transformSheetData(headers, dataRows);
   } catch (error) {
-    console.error("Error fetching from Google Sheets:", error);
+    console.warn("Google Sheets fetch failed. Falling back to local product data.", error?.message || error);
     return null;
   }
 }
@@ -170,7 +170,15 @@ export async function getProducts() {
     return sheetsData;
   }
 
-  // Fallback to JSON file
+  const localData = await getLocalProducts();
+  if (localData) {
+    return localData;
+  }
+
+  return { categories: [] };
+}
+
+export async function getLocalProducts() {
   try {
     const fs = await import("fs").then((m) => m.promises);
     const path = await import("path");
@@ -178,7 +186,7 @@ export async function getProducts() {
     const fileContent = await fs.readFile(jsonPath, "utf-8");
     return JSON.parse(fileContent);
   } catch (error) {
-    console.error("Error reading products.json:", error);
-    return { categories: [] };
+    console.warn("Error reading local products.json:", error?.message || error);
+    return null;
   }
 }

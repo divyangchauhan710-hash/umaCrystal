@@ -2,8 +2,8 @@ import { getProducts } from "@/lib/sheetsService";
 
 export async function GET() {
   try {
-    const products = await getProducts();
-    
+    const products = (await getProducts()) ?? { categories: [] };
+
     return Response.json(products, {
       headers: {
         "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
