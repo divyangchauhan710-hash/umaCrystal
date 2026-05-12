@@ -4,4 +4,5 @@ const nextConfig = {
   basePath: '/umaCrystal',
   assetPrefix: '/umaCrystal',
 };
+
 export default nextConfig;
