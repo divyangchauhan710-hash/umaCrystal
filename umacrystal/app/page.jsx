@@ -5,6 +5,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import categoriesData from "@/data/products.json";
 import CategoryCard from "@/components/CategoryCard";
 import ProductCard from "@/components/ProductCard";
+import logoImg from "../public/logo.jpeg";
 
 export default function Home() {
   const categories = categoriesData.categories;
@@ -160,7 +161,7 @@ export default function Home() {
                 <div className="absolute inset-4 bg-white rounded-3xl shadow-xl flex items-center justify-center p-8 text-center border border-gray-50">
                   <div>
                     <div className="w-64 h-32 relative mx-auto mb-6 overflow-hidden">
-                      <Image src="/logo.jpeg" alt="Uma Crystal" fill className="object-contain scale-[1.5] opacity-80 mix-blend-multiply" />
+                      <Image src={logoImg} alt="Uma Crystal" fill className="object-contain scale-[1.5] opacity-80 mix-blend-multiply" />
                     </div>
                     <p className="font-heading text-2xl text-primary italic">&quot;More Than Beautiful&quot;</p>
                   </div>

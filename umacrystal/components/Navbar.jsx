@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import categoriesData from "@/data/products.json";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import logoImg from "../public/logo.jpeg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +45,7 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center h-full overflow-hidden w-64">
             <Link href="/" className="flex items-center h-full py-2 w-full justify-start">
               <Image
-                src="/logo.jpeg"
+                src={logoImg}
                 alt="Uma Crystal Logo"
                 width={400}
                 height={160}

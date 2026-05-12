@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import categoriesData from "@/data/products.json";
+import logoImg from "../public/logo.jpeg";
 
 export default function Footer() {
   const categories = categoriesData.categories;
@@ -15,7 +16,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block bg-white p-2 rounded-lg overflow-hidden">
               <Image
-                src="/logo.jpeg"
+                src={logoImg}
                 alt="Uma Crystal Logo"
                 width={300}
                 height={120}
