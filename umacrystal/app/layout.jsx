@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { getProducts } from "@/lib/sheetsService";
+import { getProducts } from "@/lib/productsService";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-cormorant" });

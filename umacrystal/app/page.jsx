@@ -5,7 +5,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import CategoryCard from "@/components/CategoryCard";
 import ProductCard from "@/components/ProductCard";
 import logoImg from "../public/logo.jpeg";
-import { getProducts } from "@/lib/sheetsService";
+import { getProducts } from "@/lib/productsService";
 
 export default async function Home() {
   const data = (await getProducts()) ?? { categories: [] };

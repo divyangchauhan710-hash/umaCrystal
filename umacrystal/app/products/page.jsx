@@ -1,5 +1,5 @@
 import CategoryCard from "@/components/CategoryCard";
-import { getProducts } from "@/lib/sheetsService";
+import { getProducts } from "@/lib/productsService";
 
 export const metadata = {
   title: "Products & Collections | Uma Crystal",

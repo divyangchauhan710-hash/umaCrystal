@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
 import CategoryProducts from "@/components/CategoryProducts";
-import { getProducts } from "@/lib/sheetsService";
+import { getProducts } from "@/lib/productsService";
 
 export default async function CategoryPage({ params }) {
   const { category } = params;
