@@ -61,8 +61,8 @@ export default function Home() {
         </div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center text-white/50">
-          <span className="text-xs uppercase tracking-widest mb-2">Scroll</span>
+        <div className="absolute bottom-10 inset-x-0 mx-auto animate-bounce flex flex-col items-center justify-center text-white/50 w-full">
+          <span className="text-xs uppercase tracking-widest mb-2 pl-[0.1em]">Scroll</span>
           <div className="w-px h-8 bg-white/50"></div>
         </div>
       </section>
