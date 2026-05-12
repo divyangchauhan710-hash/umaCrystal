@@ -1,0 +1,28 @@
+import { Inter, Cormorant_Garamond } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-cormorant" });
+
+export const metadata = {
+  title: "Uma Crystal | More Than Beautiful",
+  description: "Premium gemstones, healing crystals and jewellery — crafted by nature, curated for you.",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${cormorant.variable} font-body bg-background text-text antialiased flex flex-col min-h-screen`}>
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </body>
+    </html>
+  );
+}

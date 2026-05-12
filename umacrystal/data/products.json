@@ -1,0 +1,356 @@
+{
+  "categories": [
+    {
+      "id": "gemstone-bracelets",
+      "name": "Gemstone Bracelets",
+      "description": "Handcrafted bracelets made from natural gemstones.",
+      "icon": "💎",
+      "products": [
+        {
+          "id": "sodalite-bracelet",
+          "name": "Sodalite Gemstone Bracelet",
+          "price": 117,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet",
+          "specs": {
+            "Stone Type": "Sodalite",
+            "Gender": "Unisex",
+            "Color": "Blue"
+          },
+          "whatsappMessage": "Hi, I am interested in Sodalite Gemstone Bracelet priced at ₹117"
+        },
+        {
+          "id": "amethyst-bracelet",
+          "name": "Amethyst Gemstone Bracelet",
+          "price": 150,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet",
+          "specs": {
+            "Stone Type": "Amethyst",
+            "Gender": "Unisex",
+            "Color": "Purple"
+          },
+          "whatsappMessage": "Hi, I am interested in Amethyst Gemstone Bracelet priced at ₹150"
+        },
+        {
+          "id": "tiger-eye-bracelet",
+          "name": "Tiger Eye Gemstone Bracelet",
+          "price": 120,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Tiger+Eye+Bracelet",
+          "specs": {
+            "Stone Type": "Tiger Eye",
+            "Gender": "Unisex",
+            "Color": "Golden Brown"
+          },
+          "whatsappMessage": "Hi, I am interested in Tiger Eye Gemstone Bracelet priced at ₹120"
+        }
+      ]
+    },
+    {
+      "id": "rudraksha",
+      "name": "Rudraksha",
+      "description": "Authentic and natural Rudraksha beads for spiritual wellness.",
+      "icon": "📿",
+      "products": [
+        {
+          "id": "5-mukhi-rudraksha",
+          "name": "5 Mukhi Rudraksha Mala",
+          "price": 500,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=5+Mukhi+Mala",
+          "specs": {
+            "Type": "5 Mukhi",
+            "Beads": "108+1",
+            "Origin": "Nepal"
+          },
+          "whatsappMessage": "Hi, I am interested in 5 Mukhi Rudraksha Mala priced at ₹500"
+        },
+        {
+          "id": "7-mukhi-rudraksha",
+          "name": "7 Mukhi Rudraksha Bracelet",
+          "price": 850,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=7+Mukhi+Bracelet",
+          "specs": {
+            "Type": "7 Mukhi",
+            "Beads": "Single Bead with chain",
+            "Origin": "Nepal"
+          },
+          "whatsappMessage": "Hi, I am interested in 7 Mukhi Rudraksha Bracelet priced at ₹850"
+        },
+        {
+          "id": "1-mukhi-rudraksha",
+          "name": "1 Mukhi Rudraksha Kaju Dana",
+          "price": 1500,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=1+Mukhi+Rudraksha",
+          "specs": {
+            "Type": "1 Mukhi",
+            "Shape": "Half Moon",
+            "Origin": "India"
+          },
+          "whatsappMessage": "Hi, I am interested in 1 Mukhi Rudraksha Kaju Dana priced at ₹1500"
+        }
+      ]
+    },
+    {
+      "id": "gemstone-healing-wand",
+      "name": "Gemstone Healing Wand",
+      "description": "Powerful crystal wands for focused energy healing and meditation.",
+      "icon": "🪄",
+      "products": [
+        {
+          "id": "clear-quartz-wand",
+          "name": "Clear Quartz Healing Wand",
+          "price": 450,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Clear+Quartz+Wand",
+          "specs": {
+            "Stone Type": "Clear Quartz",
+            "Shape": "Faceted Point",
+            "Color": "Transparent"
+          },
+          "whatsappMessage": "Hi, I am interested in Clear Quartz Healing Wand priced at ₹450"
+        },
+        {
+          "id": "rose-quartz-wand",
+          "name": "Rose Quartz Massage Wand",
+          "price": 400,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Rose+Quartz+Wand",
+          "specs": {
+            "Stone Type": "Rose Quartz",
+            "Shape": "Smooth Point",
+            "Color": "Pink"
+          },
+          "whatsappMessage": "Hi, I am interested in Rose Quartz Massage Wand priced at ₹400"
+        },
+        {
+          "id": "black-tourmaline-wand",
+          "name": "Black Tourmaline Wand",
+          "price": 550,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Black+Tourmaline+Wand",
+          "specs": {
+            "Stone Type": "Black Tourmaline",
+            "Shape": "Natural Point",
+            "Color": "Black"
+          },
+          "whatsappMessage": "Hi, I am interested in Black Tourmaline Wand priced at ₹550"
+        }
+      ]
+    },
+    {
+      "id": "tumbled-stones",
+      "name": "Tumbled Stones",
+      "description": "Smooth, polished gemstones perfect for carrying or grids.",
+      "icon": "🪨",
+      "products": [
+        {
+          "id": "citrine-tumbled",
+          "name": "Citrine Tumbled Stone",
+          "price": 100,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Citrine+Tumbled",
+          "specs": {
+            "Stone Type": "Citrine",
+            "Weight": "15-20g",
+            "Color": "Yellow"
+          },
+          "whatsappMessage": "Hi, I am interested in Citrine Tumbled Stone priced at ₹100"
+        },
+        {
+          "id": "green-aventurine-tumbled",
+          "name": "Green Aventurine Tumbled",
+          "price": 80,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Aventurine+Tumbled",
+          "specs": {
+            "Stone Type": "Green Aventurine",
+            "Weight": "15-20g",
+            "Color": "Green"
+          },
+          "whatsappMessage": "Hi, I am interested in Green Aventurine Tumbled priced at ₹80"
+        },
+        {
+          "id": "lapis-lazuli-tumbled",
+          "name": "Lapis Lazuli Tumbled",
+          "price": 120,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Lapis+Lazuli+Tumbled",
+          "specs": {
+            "Stone Type": "Lapis Lazuli",
+            "Weight": "15-20g",
+            "Color": "Deep Blue"
+          },
+          "whatsappMessage": "Hi, I am interested in Lapis Lazuli Tumbled priced at ₹120"
+        }
+      ]
+    },
+    {
+      "id": "beads-string-8mm",
+      "name": "Beads String 8mm",
+      "description": "High-quality 8mm gemstone bead strings for DIY jewelry making.",
+      "icon": "📿",
+      "products": [
+        {
+          "id": "howlite-string-8mm",
+          "name": "White Howlite 8mm String",
+          "price": 300,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Howlite+String",
+          "specs": {
+            "Stone Type": "Howlite",
+            "Bead Size": "8mm",
+            "Length": "15 inches"
+          },
+          "whatsappMessage": "Hi, I am interested in White Howlite 8mm String priced at ₹300"
+        },
+        {
+          "id": "obsidian-string-8mm",
+          "name": "Black Obsidian 8mm String",
+          "price": 350,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Obsidian+String",
+          "specs": {
+            "Stone Type": "Black Obsidian",
+            "Bead Size": "8mm",
+            "Length": "15 inches"
+          },
+          "whatsappMessage": "Hi, I am interested in Black Obsidian 8mm String priced at ₹350"
+        },
+        {
+          "id": "carnelian-string-8mm",
+          "name": "Carnelian 8mm String",
+          "price": 400,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Carnelian+String",
+          "specs": {
+            "Stone Type": "Carnelian",
+            "Bead Size": "8mm",
+            "Length": "15 inches"
+          },
+          "whatsappMessage": "Hi, I am interested in Carnelian 8mm String priced at ₹400"
+        }
+      ]
+    },
+    {
+      "id": "gemstone-pendant",
+      "name": "Gemstone Pendant",
+      "description": "Elegant natural stone pendants for everyday wear and healing.",
+      "icon": "🧿",
+      "products": [
+        {
+          "id": "moonstone-pendant",
+          "name": "Rainbow Moonstone Pendant",
+          "price": 600,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Moonstone+Pendant",
+          "specs": {
+            "Stone Type": "Rainbow Moonstone",
+            "Metal": "Silver Plated",
+            "Color": "White with flash"
+          },
+          "whatsappMessage": "Hi, I am interested in Rainbow Moonstone Pendant priced at ₹600"
+        },
+        {
+          "id": "labradorite-pendant",
+          "name": "Labradorite Teardrop Pendant",
+          "price": 650,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Labradorite+Pendant",
+          "specs": {
+            "Stone Type": "Labradorite",
+            "Metal": "Silver Plated",
+            "Color": "Grey with blue flash"
+          },
+          "whatsappMessage": "Hi, I am interested in Labradorite Teardrop Pendant priced at ₹650"
+        },
+        {
+          "id": "amethyst-pendant",
+          "name": "Amethyst Raw Pendant",
+          "price": 450,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Pendant",
+          "specs": {
+            "Stone Type": "Amethyst",
+            "Metal": "Silver Plated",
+            "Color": "Purple"
+          },
+          "whatsappMessage": "Hi, I am interested in Amethyst Raw Pendant priced at ₹450"
+        }
+      ]
+    },
+    {
+      "id": "palm-stone",
+      "name": "Palm Stone",
+      "description": "Comforting oval-shaped stones to hold during meditation.",
+      "icon": "🔮",
+      "products": [
+        {
+          "id": "selenite-palm",
+          "name": "Selenite Palm Stone",
+          "price": 250,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Selenite+Palm",
+          "specs": {
+            "Stone Type": "Selenite",
+            "Size": "2.5 inches",
+            "Color": "White"
+          },
+          "whatsappMessage": "Hi, I am interested in Selenite Palm Stone priced at ₹250"
+        },
+        {
+          "id": "fluorite-palm",
+          "name": "Rainbow Fluorite Palm Stone",
+          "price": 300,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Fluorite+Palm",
+          "specs": {
+            "Stone Type": "Fluorite",
+            "Size": "2.5 inches",
+            "Color": "Multicolor"
+          },
+          "whatsappMessage": "Hi, I am interested in Rainbow Fluorite Palm Stone priced at ₹300"
+        },
+        {
+          "id": "bloodstone-palm",
+          "name": "Bloodstone Palm Stone",
+          "price": 280,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Bloodstone+Palm",
+          "specs": {
+            "Stone Type": "Bloodstone",
+            "Size": "2.5 inches",
+            "Color": "Green with red spots"
+          },
+          "whatsappMessage": "Hi, I am interested in Bloodstone Palm Stone priced at ₹280"
+        }
+      ]
+    },
+    {
+      "id": "gemstone-ball",
+      "name": "Gemstone Ball",
+      "description": "Perfect spheres of natural crystal emitting equal energy in all directions.",
+      "icon": "🔮",
+      "products": [
+        {
+          "id": "clear-quartz-sphere",
+          "name": "Clear Quartz Sphere",
+          "price": 1200,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Quartz+Sphere",
+          "specs": {
+            "Stone Type": "Clear Quartz",
+            "Size": "40mm",
+            "Quality": "High clarity"
+          },
+          "whatsappMessage": "Hi, I am interested in Clear Quartz Sphere priced at ₹1200"
+        },
+        {
+          "id": "rose-quartz-sphere",
+          "name": "Rose Quartz Sphere",
+          "price": 900,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Rose+Quartz+Sphere",
+          "specs": {
+            "Stone Type": "Rose Quartz",
+            "Size": "40mm",
+            "Quality": "AA grade"
+          },
+          "whatsappMessage": "Hi, I am interested in Rose Quartz Sphere priced at ₹900"
+        },
+        {
+          "id": "obsidian-sphere",
+          "name": "Black Obsidian Sphere",
+          "price": 1000,
+          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Obsidian+Sphere",
+          "specs": {
+            "Stone Type": "Black Obsidian",
+            "Size": "40mm",
+            "Quality": "Polished mirror finish"
+          },
+          "whatsappMessage": "Hi, I am interested in Black Obsidian Sphere priced at ₹1000"
+        }
+      ]
+    }
+  ]
+}
