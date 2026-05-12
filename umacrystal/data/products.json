@@ -11,6 +11,25 @@
           "name": "Sodalite Gemstone Bracelet",
           "price": 117,
           "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet+Front"
+            },
+            {
+              "type": "image",
+              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet+Side"
+            },
+            {
+              "type": "image",
+              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet+Close-up"
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "thumbnail": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Video"
+            }
+          ],
           "specs": {
             "Stone Type": "Sodalite",
             "Gender": "Unisex",
@@ -23,6 +42,20 @@
           "name": "Amethyst Gemstone Bracelet",
           "price": 150,
           "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet",
+          "media": [
+            {
+              "type": "image",
+              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet+Front"
+            },
+            {
+              "type": "image",
+              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet+Back"
+            },
+            {
+              "type": "image",
+              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet+Wear"
+            }
+          ],
           "specs": {
             "Stone Type": "Amethyst",
             "Gender": "Unisex",

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { X, Info } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import ImageGallery from "@/components/ImageGallery";
 
 export default function ProductCard({ product }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,18 +13,27 @@ export default function ProductCard({ product }) {
     return `https://wa.me/910000000000?text=${encodeURIComponent(message)}`;
   };
 
+  // Handle both old single-image format and new multi-media format
+  const media = product.media || (product.image ? [{ type: "image", url: product.image }] : []);
+  const primaryImage = media[0]?.url || product.image;
+
   return (
     <>
       {/* Product Card */}
       <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 border border-gray-100 transition-all duration-300 ease-in-out flex flex-col h-full group">
         <div className="relative aspect-square overflow-hidden bg-background">
           <Image
-            src={product.image}
+            src={primaryImage}
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
+          {media.length > 1 && (
+            <div className="absolute top-3 right-3 bg-primary text-white px-2.5 py-1 rounded-full text-xs font-semibold z-10">
+              +{media.length - 1}
+            </div>
+          )}
         </div>
         
         <div className="p-5 flex flex-col flex-grow">
@@ -81,13 +91,8 @@ export default function ProductCard({ product }) {
             </button>
             
             {/* Image Section */}
-            <div className="w-full md:w-1/2 relative aspect-square md:aspect-auto bg-background">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-cover"
-              />
+            <div className="w-full md:w-1/2 bg-background p-4">
+              <ImageGallery media={media} productName={product.name} />
             </div>
             
             {/* Details Section */}
