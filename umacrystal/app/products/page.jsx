@@ -1,44 +1,14 @@
-"use client";
-
 import CategoryCard from "@/components/CategoryCard";
-import { useEffect, useState } from "react";
+import { getProducts } from "@/lib/sheetsService";
 
 export const metadata = {
   title: "Products & Collections | Uma Crystal",
   description: "Explore our wide range of authentic natural gemstones, healing crystals, rudraksha, and jewellery.",
 };
 
-export default function ProductsPage() {
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const response = await fetch('/api/products');
-        const data = await response.json();
-        setCategories(data.categories || []);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-        setCategories([]);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchProducts();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading products...</p>
-        </div>
-      </div>
-    );
-  }
+export default async function ProductsPage() {
+  const data = await getProducts();
+  const categories = data.categories || [];
 
   return (
     <div className="bg-background min-h-screen pb-20">
@@ -62,13 +32,19 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-          {categories.map((cat) => (
-            <CategoryCard key={cat.id} category={cat} large={true} />
-          ))}
-        </div>
+      {/* Categories Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        {categories.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+            {categories.map((category) => (
+              <CategoryCard key={category.id} category={category} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20 bg-white rounded-xl border border-gray-100">
+            <p className="text-gray-500">No categories found.</p>
+          </div>
+        )}
       </section>
     </div>
   );

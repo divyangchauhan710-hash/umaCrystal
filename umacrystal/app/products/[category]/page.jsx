@@ -1,43 +1,12 @@
-"use client";
-
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
 import CategoryProducts from "@/components/CategoryProducts";
-import { useEffect, useState } from "react";
+import { getProducts } from "@/lib/sheetsService";
 
-export default function CategoryPage({ params }) {
+export default async function CategoryPage({ params }) {
   const { category } = params;
-  const [categoryData, setCategoryData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchCategoryData() {
-      try {
-        const response = await fetch('/api/products');
-        const data = await response.json();
-        const foundCategory = data.categories?.find(c => c.id === category);
-        setCategoryData(foundCategory);
-      } catch (error) {
-        console.error('Error fetching category data:', error);
-        setCategoryData(null);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchCategoryData();
-  }, [category]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading category...</p>
-        </div>
-      </div>
-    );
-  }
+  const data = await getProducts();
+  const categoryData = data.categories?.find(c => c.id === category);
 
   if (!categoryData) {
     return (
@@ -59,9 +28,15 @@ export default function CategoryPage({ params }) {
   );
 }
 
-// Ensure static generation for dynamic routes
+// Generate static params for all categories
 export async function generateStaticParams() {
-  return categoriesData.categories.map((cat) => ({
-    category: cat.id,
-  }));
+  try {
+    const data = await getProducts();
+    return (data.categories || []).map((cat) => ({
+      category: cat.id,
+    }));
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
 }
