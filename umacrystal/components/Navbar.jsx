@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
-import categoriesData from "@/data/products.json";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logoImg from "../public/logo.jpeg";
 
@@ -14,9 +13,23 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [categories, setCategories] = useState([]);
   const pathname = usePathname();
 
-  const categories = categoriesData.categories;
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        setCategories(data.categories || []);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+        setCategories([]);
+      }
+    }
+
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

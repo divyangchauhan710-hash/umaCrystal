@@ -2,11 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
-import categoriesData from "@/data/products.json";
+import { useEffect, useState } from "react";
 import logoImg from "../public/logo.jpeg";
 
 export default function Footer() {
-  const categories = categoriesData.categories;
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        setCategories(data.categories || []);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+        setCategories([]);
+      }
+    }
+
+    fetchCategories();
+  }, []);
 
   return (
     <footer className="bg-primary text-white pt-16 pb-8">

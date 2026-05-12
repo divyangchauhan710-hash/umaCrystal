@@ -1,5 +1,5 @@
-import categoriesData from "@/data/products.json";
 import CategoryCard from "@/components/CategoryCard";
+import { useEffect, useState } from "react";
 
 export const metadata = {
   title: "Products & Collections | Uma Crystal",
@@ -7,7 +7,36 @@ export const metadata = {
 };
 
 export default function ProductsPage() {
-  const categories = categoriesData.categories;
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        setCategories(data.categories || []);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        setCategories([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading products...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-background min-h-screen pb-20">

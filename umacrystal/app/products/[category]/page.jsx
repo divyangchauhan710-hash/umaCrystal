@@ -1,11 +1,41 @@
 import Link from "next/link";
-import categoriesData from "@/data/products.json";
 import { Sparkles } from "lucide-react";
 import CategoryProducts from "@/components/CategoryProducts";
+import { useEffect, useState } from "react";
 
 export default function CategoryPage({ params }) {
   const { category } = params;
-  const categoryData = categoriesData.categories.find(c => c.id === category);
+  const [categoryData, setCategoryData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchCategoryData() {
+      try {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+        const foundCategory = data.categories?.find(c => c.id === category);
+        setCategoryData(foundCategory);
+      } catch (error) {
+        console.error('Error fetching category data:', error);
+        setCategoryData(null);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchCategoryData();
+  }, [category]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading category...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!categoryData) {
     return (
