@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Search as SearchIcon, X, ArrowRight, Gem } from "lucide-react";
+import { Search as SearchIcon, X, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import * as LucideIcons from "lucide-react";
 
 export default function Search({ categories = [] }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -149,17 +150,20 @@ export default function Search({ categories = [] }) {
                   <div className="col-span-full mb-2">
                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Popular Categories</h3>
                   </div>
-                  {categories.slice(0, 4).map((cat) => (
-                    <Link
-                      key={cat.id}
-                      href={`/products/${cat.id}`}
-                      onClick={handleClose}
-                      className="p-4 rounded-2xl bg-gray-50 hover:bg-light/10 text-center transition-all group border border-transparent hover:border-light/20"
-                    >
-                      <Gem className="w-6 h-6 mx-auto mb-2 text-primary/40 group-hover:text-gold transition-colors" />
-                      <span className="text-sm font-semibold text-primary">{cat.name}</span>
-                    </Link>
-                  ))}
+                  {categories.slice(0, 4).map((cat) => {
+                    const IconComponent = LucideIcons[cat.icon] || LucideIcons.Gem;
+                    return (
+                      <Link
+                        key={cat.id}
+                        href={`/products/${cat.id}`}
+                        onClick={handleClose}
+                        className="p-4 rounded-2xl bg-gray-50 hover:bg-light/10 text-center transition-all group border border-transparent hover:border-light/20"
+                      >
+                        <IconComponent className="w-6 h-6 mx-auto mb-2 text-primary/40 group-hover:text-gold transition-colors" />
+                        <span className="text-sm font-semibold text-primary">{cat.name}</span>
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
             </div>
