@@ -41,19 +41,19 @@
           "id": "amethyst-bracelet",
           "name": "Amethyst Gemstone Bracelet",
           "price": 150,
-          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet",
+          "image": "/client-media/amtstb1.png",
           "media": [
             {
               "type": "image",
-              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet+Front"
+              "url": "/client-media/amtstb1.png"
             },
             {
               "type": "image",
-              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet+Back"
+              "url": "/client-media/amtstb2.png"
             },
             {
               "type": "image",
-              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Amethyst+Bracelet+Wear"
+              "url": "/client-media/amtstb3.png"
             }
           ],
           "specs": {
