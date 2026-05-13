@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logoImg from "../public/logo.jpeg";
 import * as LucideIcons from "lucide-react";
+import Search from "./Search";
 
 export default function Navbar({ categories = [] }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -150,6 +151,8 @@ export default function Navbar({ categories = [] }) {
                 pathname === "/contact" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
               }`}></span>
             </Link>
+
+            <Search categories={categories} />
           </div>
 
           {/* Desktop CTA */}
@@ -166,7 +169,8 @@ export default function Navbar({ categories = [] }) {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex md:hidden items-center">
+          <div className="flex md:hidden items-center space-x-2">
+            <Search categories={categories} />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-text hover:text-primary p-2 focus:outline-none transition-colors"
