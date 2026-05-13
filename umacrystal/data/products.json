@@ -10,24 +10,24 @@
           "id": "sodalite-bracelet",
           "name": "Sodalite Gemstone Bracelet",
           "price": 117,
-          "image": "/umaCrystal/client-media/sgb1.webp",
+          "image": "/client-media/sgb1.webp",
           "media": [
             {
               "type": "image",
-              "url": "/umaCrystal/client-media/sgb1.webp"
+              "url": "/client-media/sgb1.webp"
             },
             {
               "type": "image",
-              "url": "/umaCrystal/client-media/sgb2.webp"
+              "url": "/client-media/sgb2.webp"
             },
             {
               "type": "image",
-              "url": "/umaCrystal/client-media/sgb3.webp"
+              "url": "/client-media/sgb3.webp"
             },
             {
               "type": "video",
-              "url": "/umaCrystal/client-media/sample-video.mp4",
-              "thumbnail": "/umaCrystal/client-media/sgb1.webp"
+              "url": "/client-media/sample-video.mp4",
+              "thumbnail": "/client-media/sgb1.webp"
             }
           ],
           "specs": {
