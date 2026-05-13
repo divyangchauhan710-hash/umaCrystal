@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logoImg from "../public/logo.jpeg";
+import * as LucideIcons from "lucide-react";
 
 export default function Navbar({ categories = [] }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -101,7 +102,12 @@ export default function Navbar({ categories = [] }) {
                     className="group/item flex items-center p-2 -m-2 rounded-lg hover:bg-light/10 transition-all duration-300"
                     style={{ transitionDelay: `${idx * 20}ms` }}
                   >
-                    <span className="text-2xl mr-4 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:-rotate-6">{cat.icon}</span>
+                    <span className="text-xl mr-4 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:-rotate-6 text-primary/70 group-hover/item:text-primary">
+                      {(() => {
+                        const Icon = LucideIcons[cat.icon] || LucideIcons.Gem;
+                        return <Icon className="w-6 h-6" />;
+                      })()}
+                    </span>
                     <div>
                       <p className="font-medium text-text group-hover/item:text-primary transition-colors">
                         {cat.name}
@@ -217,7 +223,12 @@ export default function Navbar({ categories = [] }) {
                     href={`/products/${cat.id}`}
                     className="flex items-center px-3 py-3 rounded-lg text-gray-600 hover:text-primary hover:bg-light/10 transition-colors"
                   >
-                    <span className="mr-4 text-xl">{cat.icon}</span>
+                    <span className="mr-4 text-primary/70">
+                      {(() => {
+                        const Icon = LucideIcons[cat.icon] || LucideIcons.Gem;
+                        return <Icon className="w-5 h-5" />;
+                      })()}
+                    </span>
                     <span className="font-medium">{cat.name}</span>
                   </Link>
                 ))}
