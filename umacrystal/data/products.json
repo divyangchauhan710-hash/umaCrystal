@@ -10,24 +10,24 @@
           "id": "sodalite-bracelet",
           "name": "Sodalite Gemstone Bracelet",
           "price": 117,
-          "image": "/client-media/sgb1.webp",
+          "image": "/client-media/sgb1.png",
           "media": [
             {
               "type": "image",
-              "url": "/client-media/sgb1.webp"
+              "url": "/client-media/sgb1.png"
             },
             {
               "type": "image",
-              "url": "/client-media/sgb2.webp"
+              "url": "/client-media/sgb2.png"
             },
             {
               "type": "image",
-              "url": "/client-media/sgb3.webp"
+              "url": "/client-media/sgb3.png"
             },
             {
               "type": "video",
               "url": "/client-media/sample-video.mp4",
-              "thumbnail": "/client-media/sgb1.webp"
+              "thumbnail": "/client-media/sgb1.png"
             }
           ],
           "specs": {
