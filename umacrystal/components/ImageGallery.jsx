@@ -53,15 +53,61 @@ export default function ImageGallery({ media, productName }) {
                 </button>
               </>
             ) : (
-              <iframe
-                width="100%"
-                height="100%"
-                src={currentMedia.url.replace("watch?v=", "embed/")}
-                title={productName}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <div className="w-full h-full bg-gray-900 flex flex-col items-center justify-center p-6 text-center">
+                {currentMedia.url.includes("youtube.com") || currentMedia.url.includes("youtu.be") ? (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={currentMedia.url.replace("watch?v=", "embed/")}
+                    title={productName}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0"
+                  ></iframe>
+                ) : currentMedia.url.includes("sample-video.mp4") ? (
+                  <div className="space-y-4">
+                    <Play className="w-12 h-12 text-gold mx-auto opacity-50" />
+                    <div>
+                      <h4 className="text-white font-heading font-bold text-lg">Video Coming Soon</h4>
+                      <p className="text-gray-400 text-sm mt-1">We are currently preparing an original product video for you.</p>
+                    </div>
+                    <button 
+                      onClick={() => setIsVideoPlaying(false)}
+                      className="text-gold text-sm font-medium hover:underline"
+                    >
+                      Back to Gallery
+                    </button>
+                  </div>
+                ) : (
+                  <video 
+                    src={currentMedia.url} 
+                    controls 
+                    autoPlay 
+                    className="max-w-full max-h-full"
+                    onError={() => {
+                      // Fallback if local video fails to load
+                      const el = document.getElementById('video-fallback');
+                      if (el) el.style.display = 'flex';
+                    }}
+                  />
+                )}
+                <div id="video-fallback" className="hidden absolute inset-0 bg-gray-900 flex-col items-center justify-center p-6 text-center">
+                   <div className="space-y-4">
+                    <Play className="w-12 h-12 text-gold mx-auto opacity-50" />
+                    <div>
+                      <h4 className="text-white font-heading font-bold text-lg">Video Not Available</h4>
+                      <p className="text-gray-400 text-sm mt-1">Sorry, this video file could not be loaded.</p>
+                    </div>
+                    <button 
+                      onClick={() => setIsVideoPlaying(false)}
+                      className="text-gold text-sm font-medium hover:underline"
+                    >
+                      Back to Gallery
+                    </button>
+                  </div>
+                </div>
+              </div>
             )}
           </div>
         ) : (
