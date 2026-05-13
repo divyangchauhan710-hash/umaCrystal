@@ -38,7 +38,7 @@ export default function Search({ categories = [] }) {
     } else {
       setResults([]);
     }
-  }, [query]);
+  }, [query, allProducts]);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -142,7 +142,7 @@ export default function Search({ categories = [] }) {
                 </div>
               ) : query.length > 1 ? (
                 <div className="text-center py-12">
-                  <p className="text-gray-400 text-lg italic">No crystals found matching "{query}"</p>
+                  <p className="text-gray-400 text-lg italic">No crystals found matching &quot;{query}&quot;</p>
                 </div>
               ) : (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
