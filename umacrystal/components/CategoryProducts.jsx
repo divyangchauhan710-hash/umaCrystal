@@ -4,9 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import { ArrowLeft } from "lucide-react";
+import * as LucideIcons from "lucide-react";
 
 export default function CategoryProducts({ categoryData }) {
   const [sortOrder, setSortOrder] = useState('default');
+  
+  const IconComponent = LucideIcons[categoryData.icon] || LucideIcons.Gem;
 
   // Sort logic (frontend only)
   let displayedProducts = [...categoryData.products];
@@ -31,8 +34,8 @@ export default function CategoryProducts({ categoryData }) {
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="flex items-center">
-              <div className="w-16 h-16 bg-light/20 text-primary rounded-full flex items-center justify-center text-3xl mr-5 shrink-0">
-                {categoryData.icon}
+              <div className="w-16 h-16 bg-light/20 text-primary rounded-full flex items-center justify-center mr-5 shrink-0">
+                <IconComponent className="w-8 h-8" />
               </div>
               <div>
                 <h1 className="text-3xl md:text-5xl font-heading font-bold text-text mb-2">{categoryData.name}</h1>

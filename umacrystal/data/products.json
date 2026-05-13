@@ -4,7 +4,7 @@
       "id": "gemstone-bracelets",
       "name": "Gemstone Bracelets",
       "description": "Handcrafted bracelets made from natural gemstones.",
-      "icon": "💎",
+      "icon": "Gem",
       "products": [
         {
           "id": "sodalite-bracelet",
@@ -95,7 +95,7 @@
       "id": "rudraksha",
       "name": "Rudraksha",
       "description": "Authentic and natural Rudraksha beads for spiritual wellness.",
-      "icon": "📿",
+      "icon": "CircleDot",
       "products": [
         {
           "id": "5-mukhi-rudraksha",
@@ -139,7 +139,7 @@
       "id": "gemstone-healing-wand",
       "name": "Gemstone Healing Wand",
       "description": "Powerful crystal wands for focused energy healing and meditation.",
-      "icon": "🪄",
+      "icon": "Sparkles",
       "products": [
         {
           "id": "clear-quartz-wand",
@@ -183,7 +183,7 @@
       "id": "tumbled-stones",
       "name": "Tumbled Stones",
       "description": "Smooth, polished gemstones perfect for carrying or grids.",
-      "icon": "🪨",
+      "icon": "Shapes",
       "products": [
         {
           "id": "citrine-tumbled",
@@ -227,7 +227,7 @@
       "id": "beads-string-8mm",
       "name": "Beads String 8mm",
       "description": "High-quality 8mm gemstone bead strings for DIY jewelry making.",
-      "icon": "📿",
+      "icon": "Dna",
       "products": [
         {
           "id": "howlite-string-8mm",
@@ -271,7 +271,7 @@
       "id": "gemstone-pendant",
       "name": "Gemstone Pendant",
       "description": "Elegant natural stone pendants for everyday wear and healing.",
-      "icon": "🧿",
+      "icon": "Pentagon",
       "products": [
         {
           "id": "moonstone-pendant",
@@ -315,7 +315,7 @@
       "id": "palm-stone",
       "name": "Palm Stone",
       "description": "Comforting oval-shaped stones to hold during meditation.",
-      "icon": "🔮",
+      "icon": "Fingerprint",
       "products": [
         {
           "id": "selenite-palm",
@@ -359,7 +359,7 @@
       "id": "gemstone-ball",
       "name": "Gemstone Ball",
       "description": "Perfect spheres of natural crystal emitting equal energy in all directions.",
-      "icon": "🔮",
+      "icon": "Circle",
       "products": [
         {
           "id": "clear-quartz-sphere",

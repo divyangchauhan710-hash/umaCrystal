@@ -1,6 +1,9 @@
 import Link from "next/link";
+import * as LucideIcons from "lucide-react";
 
 export default function CategoryCard({ category, large = false }) {
+  const IconComponent = LucideIcons[category.icon] || LucideIcons.Gem;
+
   return (
     <Link href={`/products/${category.id}`} className="block group">
       <div className={`bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1 relative overflow-hidden h-full flex flex-col ${large ? "min-h-[240px]" : ""}`}>
@@ -8,8 +11,8 @@ export default function CategoryCard({ category, large = false }) {
         <div className="absolute -top-10 -right-10 w-24 h-24 bg-light/10 rounded-full transition-transform duration-500 group-hover:scale-150"></div>
         
         <div className="relative z-10 flex flex-col h-full">
-          <div className={`flex items-center justify-center bg-background rounded-full mb-4 text-primary shrink-0 ${large ? "w-16 h-16 text-3xl" : "w-12 h-12 text-2xl"}`}>
-            {category.icon}
+          <div className={`flex items-center justify-center bg-background rounded-full mb-4 text-primary shrink-0 ${large ? "w-16 h-16" : "w-12 h-12"}`}>
+            <IconComponent className={large ? "w-8 h-8" : "w-6 h-6"} />
           </div>
           
           <h3 className={`font-heading font-semibold text-primary mb-2 transition-colors group-hover:text-gold ${large ? "text-2xl" : "text-xl"}`}>
