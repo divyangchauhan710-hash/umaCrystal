@@ -10,24 +10,24 @@
           "id": "sodalite-bracelet",
           "name": "Sodalite Gemstone Bracelet",
           "price": 117,
-          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet",
+          "image": "/umaCrystal/client-media/sgb1.webp",
           "media": [
             {
               "type": "image",
-              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet+Front"
+              "url": "/umaCrystal/client-media/sgb1.webp"
             },
             {
               "type": "image",
-              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet+Side"
+              "url": "/umaCrystal/client-media/sgb2.webp"
             },
             {
               "type": "image",
-              "url": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Bracelet+Close-up"
+              "url": "/umaCrystal/client-media/sgb3.webp"
             },
             {
               "type": "video",
-              "url": "/client-media/sample-video.mp4",
-              "thumbnail": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Sodalite+Video"
+              "url": "/umaCrystal/client-media/sample-video.mp4",
+              "thumbnail": "/umaCrystal/client-media/sgb1.webp"
             }
           ],
           "specs": {
