@@ -4,10 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { icons } from "@/lib/icons";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logoImg from "../public/logo.jpeg";
-import * as LucideIcons from "lucide-react";
 import Search from "./Search";
 
 export default function Navbar({ categories = [] }) {
@@ -81,7 +80,7 @@ export default function Navbar({ categories = [] }) {
                 }`}
               >
                 Products 
-                <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-300 ${desktopDropdownOpen ? "rotate-180 text-primary" : ""}`} />
+                <icons.ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-300 ${desktopDropdownOpen ? "rotate-180 text-primary" : ""}`} />
                 <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ease-out ${
                   pathname.startsWith("/products") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                 }`}></span>
@@ -105,8 +104,8 @@ export default function Navbar({ categories = [] }) {
                   >
                     <span className="text-xl mr-4 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:-rotate-6 text-primary/70 group-hover/item:text-primary">
                       {(() => {
-                        const Icon = LucideIcons[cat.icon] || LucideIcons.Gem;
-                        return <Icon className="w-6 h-6" />;
+  const IconComponent = icons[cat.icon] || icons.Gem;
+  return <IconComponent className="w-6 h-6" />;
                       })()}
                     </span>
                     <div>
@@ -209,7 +208,7 @@ export default function Navbar({ categories = [] }) {
               }`}
             >
               <span>Products</span>
-              <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileDropdownOpen ? "rotate-180 text-primary" : ""}`} />
+              <icons.ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileDropdownOpen ? "rotate-180 text-primary" : ""}`} />
             </button>
             
             {/* Mobile Categories Dropdown */}
@@ -229,8 +228,8 @@ export default function Navbar({ categories = [] }) {
                   >
                     <span className="mr-4 text-primary/70">
                       {(() => {
-                        const Icon = LucideIcons[cat.icon] || LucideIcons.Gem;
-                        return <Icon className="w-5 h-5" />;
+  const IconComponent = icons[cat.icon] || icons.Gem;
+  return <IconComponent className="w-5 h-5" />;
                       })()}
                     </span>
                     <span className="font-medium">{cat.name}</span>

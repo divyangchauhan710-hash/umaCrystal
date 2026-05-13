@@ -3,13 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import { ArrowLeft } from "lucide-react";
-import * as LucideIcons from "lucide-react";
+import { icons } from "@/lib/icons";
 
 export default function CategoryProducts({ categoryData }) {
   const [sortOrder, setSortOrder] = useState('default');
   
-  const IconComponent = LucideIcons[categoryData.icon] || LucideIcons.Gem;
+  const IconComponent = icons[categoryData.icon] || icons.Gem;
 
   // Sort logic (frontend only)
   let displayedProducts = [...categoryData.products];
@@ -81,7 +80,7 @@ export default function CategoryProducts({ categoryData }) {
         
         <div className="mt-16 text-center border-t border-gray-200 pt-10">
           <Link href="/products" className="inline-flex items-center text-primary font-medium hover:text-gold transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" /> Back to All Collections
+            <icons.ArrowLeft className="w-4 h-4 mr-2" /> Back to All Collections
           </Link>
         </div>
       </section>

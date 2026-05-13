@@ -1,8 +1,8 @@
 import Link from "next/link";
-import * as LucideIcons from "lucide-react";
+import { icons } from "@/lib/icons";
 
 export default function CategoryCard({ category, large = false }) {
-  const IconComponent = LucideIcons[category.icon] || LucideIcons.Gem;
+  const IconComponent = icons[category.icon] || icons.Gem;
 
   return (
     <Link href={`/products/${category.id}`} className="block group">

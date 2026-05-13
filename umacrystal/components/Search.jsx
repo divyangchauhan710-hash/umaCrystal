@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Search as SearchIcon, X, ArrowRight } from "lucide-react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import * as LucideIcons from "lucide-react";
+import { icons } from "@/lib/icons";
 
 export default function Search({ categories = [] }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +13,12 @@ export default function Search({ categories = [] }) {
   const inputRef = useRef(null);
   const router = useRouter();
 
-  // Extract all products from categories
-  const allProducts = categories.flatMap(cat => 
-    cat.products.map(p => ({ ...p, categoryName: cat.name, categoryId: cat.id }))
-  );
+  // Extract all products from categories with memoization to avoid infinite loops
+  const allProducts = useMemo(() => {
+    return categories.flatMap(cat => 
+      cat.products.map(p => ({ ...p, categoryName: cat.name, categoryId: cat.id }))
+    );
+  }, [categories]);
 
   useEffect(() => {
     if (isOpen) {
@@ -62,7 +63,7 @@ export default function Search({ categories = [] }) {
         className="p-2.5 text-text hover:text-primary hover:bg-light/10 rounded-full transition-all duration-300 group"
         aria-label="Search products"
       >
-        <SearchIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+        <icons.Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
       </button>
 
       {/* Full-screen Search Overlay */}
@@ -88,11 +89,11 @@ export default function Search({ categories = [] }) {
               onClick={handleClose}
               className="absolute -top-4 -right-4 md:-top-8 md:-right-8 p-3 text-gray-400 hover:text-primary transition-colors"
             >
-              <X className="w-6 h-6" />
+              <icons.X className="w-6 h-6" />
             </button>
 
             <form onSubmit={handleSearch} className="relative">
-              <SearchIcon className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 text-gold animate-pulse" />
+              <icons.Search className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 text-gold animate-pulse" />
               <input
                 ref={inputRef}
                 type="text"
@@ -136,7 +137,7 @@ export default function Search({ categories = [] }) {
                           </h4>
                           <p className="text-xs text-gray-400 font-medium">{product.categoryName} • ₹{product.price}</p>
                         </div>
-                        <ArrowRight className="ml-auto w-5 h-5 text-gray-200 group-hover:text-gold group-hover:translate-x-1 transition-all" />
+                        <icons.ArrowRight className="ml-auto w-5 h-5 text-gray-200 group-hover:text-gold group-hover:translate-x-1 transition-all" />
                       </Link>
                     ))}
                   </div>
@@ -151,7 +152,7 @@ export default function Search({ categories = [] }) {
                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Popular Categories</h3>
                   </div>
                   {categories.slice(0, 4).map((cat) => {
-                    const IconComponent = LucideIcons[cat.icon] || LucideIcons.Gem;
+                    const IconComponent = icons[cat.icon] || icons.Gem;
                     return (
                       <Link
                         key={cat.id}

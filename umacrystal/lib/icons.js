@@ -1,0 +1,41 @@
+import { 
+  Gem, 
+  CircleDot, 
+  Sparkles, 
+  Shapes, 
+  Dna, 
+  Pentagon, 
+  Fingerprint, 
+  Circle,
+  Search,
+  X,
+  ArrowRight,
+  ChevronDown,
+  Menu,
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  ArrowLeft,
+  ShoppingBag
+} from "lucide-react";
+
+export const icons = {
+  Gem,
+  CircleDot,
+  Sparkles,
+  Shapes,
+  Dna,
+  Pentagon,
+  Fingerprint,
+  Circle,
+  Search,
+  X,
+  ArrowRight,
+  ChevronDown,
+  Menu,
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  ArrowLeft,
+  ShoppingBag
+};
