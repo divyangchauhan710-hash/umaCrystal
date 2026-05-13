@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { icons } from "@/lib/icons";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logoImg from "../public/logo.jpeg";
 
@@ -58,15 +58,15 @@ export default function Footer({ categories = [] }) {
             
             <div className="pt-4 space-y-3">
               <div className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />
+                <icons.MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                 <span className="text-sm">Khambhat, Gujarat, India</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-gold shrink-0" />
+                <icons.Phone className="w-5 h-5 text-gold shrink-0" />
                 <span className="text-sm">+91 93271 05966</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5 text-gold shrink-0" />
+                <icons.Mail className="w-5 h-5 text-gold shrink-0" />
                 <span className="text-sm">contact@umacrystal.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
@@ -82,8 +82,13 @@ export default function Footer({ categories = [] }) {
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
               {categories.map((cat) => (
                 <li key={cat.id}>
-                  <Link href={`/products/${cat.id}`} className="text-sm text-gray-300 hover:text-white transition-colors flex items-center">
-                    <span className="mr-2 text-xs">{cat.icon}</span>
+                  <Link href={`/products/${cat.id}`} className="text-sm text-gray-300 hover:text-white transition-colors flex items-center group/footer-item">
+                    <span className="mr-2 text-gold/60 group-hover/footer-item:text-gold transition-colors">
+                      {(() => {
+                        const Icon = icons[cat.icon] || icons.Gem;
+                        return <Icon className="w-4 h-4" />;
+                      })()}
+                    </span>
                     {cat.name}
                   </Link>
                 </li>

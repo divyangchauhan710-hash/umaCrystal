@@ -16,7 +16,10 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowLeft,
-  ShoppingBag
+  ShoppingBag,
+  MapPin,
+  Mail,
+  Phone
 } from "lucide-react";
 
 export const icons = {
@@ -37,5 +40,8 @@ export const icons = {
   ChevronLeft,
   ChevronRight,
   ArrowLeft,
-  ShoppingBag
+  ShoppingBag,
+  MapPin,
+  Mail,
+  Phone
 };
