@@ -67,7 +67,21 @@
           "id": "tiger-eye-bracelet",
           "name": "Tiger Eye Gemstone Bracelet",
           "price": 120,
-          "image": "https://placehold.co/400x400/A8BFDB/1B3A6B?text=Tiger+Eye+Bracelet",
+          "image": "/client-media/te1.png",
+          "media": [
+            {
+              "type": "image",
+              "url": "/client-media/te1.png"
+            },
+            {
+              "type": "image",
+              "url": "/client-media/te2.png"
+            },
+            {
+              "type": "image",
+              "url": "/client-media/te3.png"
+            }
+          ],
           "specs": {
             "Stone Type": "Tiger Eye",
             "Gender": "Unisex",
