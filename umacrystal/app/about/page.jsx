@@ -42,8 +42,8 @@ export default function About() {
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-[200px] border border-gray-100 hidden sm:block">
-              <p className="font-heading text-4xl font-bold text-gold mb-1">10+</p>
-              <p className="text-sm text-gray-500 font-medium">Years of Trust & Excellence</p>
+              <p className="font-heading text-4xl font-bold text-gold mb-1">New</p>
+              <p className="text-sm text-gray-500 font-medium">A Fresh Vision for Crystals</p>
             </div>
           </div>
           
@@ -53,10 +53,10 @@ export default function About() {
             
             <div className="prose prose-lg text-gray-600 space-y-4 pt-4">
               <p>
-                Uma Crystal was established with a passion for natural gemstones and healing crystals. We believe in the profound energy and beauty that mother nature provides.
+                Uma Crystal is a fresh, passionate startup born out of a deep love for natural gemstones and the healing power of crystals. We represent a new generation of crystal curators, dedicated to bringing pure energy and earthy beauty into modern lives.
               </p>
               <p>
-                What started as a small personal collection has grown into a trusted destination for crystal lovers, healers, and jewelry makers across India. We source the finest stones from trusted origins and bring them to you with care and authenticity.
+                Our journey began in Khambhat, the heart of gemstone craftsmanship, with a simple mission: to make high-quality, authentic crystals accessible to everyone. As a startup, we are driven by energy, transparency, and a personal commitment to every piece we source.
               </p>
               <p>
                 Every piece in our collection is carefully selected to ensure authenticity, quality, and energetic purity. Whether you are looking for a statement piece for your home, a healing wand for your practice, or simply a beautiful gemstone bracelet, Uma Crystal is here to provide you with the best nature has to offer.
@@ -65,12 +65,12 @@ export default function About() {
             
             <div className="pt-8 grid grid-cols-2 gap-6 border-t mt-8">
               <div>
-                <p className="text-sm text-gray-500 mb-1">Established</p>
-                <p className="font-heading text-xl font-bold text-primary">2014</p>
+                <p className="text-sm text-gray-500 mb-1">Founded</p>
+                <p className="font-heading text-xl font-bold text-primary">2024</p>
               </div>
               <div>
                 <p className="text-sm text-gray-500 mb-1">Location</p>
-                <p className="font-heading text-xl font-bold text-primary">Ahmedabad, India</p>
+                <p className="font-heading text-xl font-bold text-primary">Khambhat, India</p>
               </div>
               <div className="col-span-2">
                 <p className="text-sm text-gray-500 mb-1">Nature of Business</p>

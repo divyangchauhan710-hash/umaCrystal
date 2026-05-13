@@ -143,7 +143,7 @@ export default async function Home() {
             <div className="w-full md:w-1/2 space-y-6">
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-text">The Story of <br className="hidden lg:block"/> Uma Crystal</h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Established with a passion for natural gemstones and healing crystals. We believe in the profound energy and beauty that mother nature provides. Every piece in our collection is carefully selected to ensure authenticity, quality, and energetic purity.
+                Uma Crystal is a fresh startup driven by a passion for natural gemstones. Founded in Khambhat, we represent a new generation of curators bringing the pure energy of mother nature to you. Every piece in our new collection is personally selected to ensure authenticity and premium quality.
               </p>
               <div className="pt-4">
                 <Link href="/about" className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm">

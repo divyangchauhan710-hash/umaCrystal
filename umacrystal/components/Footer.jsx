@@ -25,7 +25,7 @@ export default function Footer({ categories = [] }) {
             </Link>
             <p className="text-light text-lg italic font-heading">&quot;More Than Beautiful&quot;</p>
             <p className="text-sm text-gray-300 leading-relaxed max-w-sm">
-              Premium gemstones, healing crystals and jewellery — crafted by nature, curated for you. We source the finest stones from trusted origins.
+              A fresh startup dedicated to premium gemstones and healing crystals. Crafted by nature, curated with passion. We represent a new generation of quality and transparency in the world of crystals.
             </p>
             <div className="flex space-x-4">
               <a href="https://wa.me/919327105966" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
@@ -59,7 +59,7 @@ export default function Footer({ categories = [] }) {
             <div className="pt-4 space-y-3">
               <div className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                <span className="text-sm">Ahmedabad, Gujarat, India</span>
+                <span className="text-sm">Khambhat, Gujarat, India</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-gold shrink-0" />

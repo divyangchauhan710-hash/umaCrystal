@@ -20,6 +20,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     setIsSubmitting(true);
 
     try {
@@ -31,7 +32,7 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // TODO: Replace with real key
+          access_key: "5a2e46da-f8d2-4a8f-879e-387fb2461b4b", // Using a dummy key or instructing user
           subject: "New Contact Form Submission - Uma Crystal",
           from_name: formData.name,
           ...formData
@@ -43,11 +44,12 @@ export default function Contact() {
         setIsSuccess(true);
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        alert("Something went wrong. Please try again.");
+        console.error("Web3Forms Error:", result);
+        alert(result.message || "Something went wrong. Please ensure your access key is correct.");
       }
     } catch (error) {
-      console.error(error);
-      alert("Error submitting form. Please check your connection.");
+      console.error("Submission Error:", error);
+      alert("Error submitting form. Please check your connection or try again later.");
     } finally {
       setIsSubmitting(false);
       // Reset success message after 5 seconds
@@ -65,7 +67,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Contact Us</h1>
           <p className="text-lg text-light max-w-2xl mx-auto font-light">
-            We&apos;d love to hear from you. Get in touch with us for any inquiries.
+            We are a fresh startup and we love hearing from our community. Get in touch for inquiries, collaborations, or just to say hi!
           </p>
         </div>
       </section>
@@ -205,7 +207,7 @@ export default function Contact() {
                   <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-1">Address</h4>
                   <p className="text-gray-600 leading-relaxed">
                     Uma Crystal,<br />
-                    Ahmedabad, Gujarat,<br />
+                    Khambhat, Gujarat,<br />
                     India
                   </p>
                 </div>
@@ -242,7 +244,7 @@ export default function Contact() {
       <section className="mt-20">
         <div className="w-full h-96 bg-gray-200 relative">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117506.12607994406!2d72.49217646199341!3d23.020490793139365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709230000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59174.56239127622!2d72.59765275631776!3d22.318081745404554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f87b2803b9b4d%3A0x8e826b63d76e2570!2sKhambhat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1715620000000!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
