@@ -31,7 +31,7 @@ export default function Footer({ categories = [] }) {
               <a href="https://wa.me/919327105966" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
                 <WhatsAppIcon className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
+              <a href="https://www.instagram.com/_umacrystal_?igsh=bW9jYnNqcHF4NDU4" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -67,7 +67,7 @@ export default function Footer({ categories = [] }) {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <icons.Mail className="w-5 h-5 text-gold shrink-0" />
-                <span className="text-sm">contact@umacrystal.com</span>
+                <span className="text-sm">umacrystal2909@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <span className="w-5 h-5 text-gold shrink-0 flex items-center justify-center font-bold text-xs border border-gold rounded-sm">G</span>

@@ -21,7 +21,10 @@ export default function ProductCard({ product }) {
     <>
       {/* Product Card */}
       <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 border border-gray-100 transition-all duration-300 ease-in-out flex flex-col h-full group">
-        <div className="relative aspect-square overflow-hidden bg-background">
+        <div 
+          className="relative aspect-square overflow-hidden bg-background cursor-pointer"
+          onClick={() => setIsModalOpen(true)}
+        >
           <Image
             src={primaryImage}
             alt={product.name}

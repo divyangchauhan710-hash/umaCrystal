@@ -34,13 +34,13 @@ export default async function Home() {
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-light text-sm font-medium mb-6 backdrop-blur-sm">
-            Premium Gemstones & Jewellery
+            Premium Gemstones
           </span>
           <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight drop-shadow-md">
             Discover the Power of <br className="hidden md:block" /> Natural Crystals
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-10 font-light max-w-2xl mx-auto">
-            Premium gemstones, healing crystals and jewellery — crafted by nature, curated for you.
+            Premium gemstones and healing crystals — crafted by nature, curated for you.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

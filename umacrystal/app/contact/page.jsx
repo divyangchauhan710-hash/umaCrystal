@@ -195,7 +195,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-1">Email</h4>
-                  <p className="text-gray-600">contact@umacrystal.com</p>
+                  <p className="text-gray-600">umacrystal2909@gmail.com</p>
                 </div>
               </div>
               

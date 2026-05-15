@@ -10,7 +10,33 @@ const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500"
 
 export const metadata = {
   title: "Uma Crystal | More Than Beautiful",
-  description: "Premium gemstones, healing crystals and jewellery — crafted by nature, curated for you.",
+  description: "Premium gemstones and healing crystals — crafted by nature, curated for you.",
+  icons: {
+    icon: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
+  openGraph: {
+    title: "Uma Crystal | More Than Beautiful",
+    description: "Premium gemstones and healing crystals — crafted by nature, curated for you.",
+    url: "https://umacrystal.com",
+    siteName: "Uma Crystal",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 1200,
+        height: 1200,
+        alt: "Uma Crystal Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Uma Crystal | More Than Beautiful",
+    description: "Premium gemstones and healing crystals — crafted by nature, curated for you.",
+    images: ["/logo.jpeg"],
+  },
 };
 
 export default async function RootLayout({ children }) {

@@ -3,7 +3,7 @@ import { getProducts } from "@/lib/productsService";
 
 export const metadata = {
   title: "Products & Collections | Uma Crystal",
-  description: "Explore our wide range of authentic natural gemstones, healing crystals, rudraksha, and jewellery.",
+  description: "Explore our wide range of authentic natural gemstones, healing crystals, and rudraksha.",
 };
 
 export default async function ProductsPage() {
