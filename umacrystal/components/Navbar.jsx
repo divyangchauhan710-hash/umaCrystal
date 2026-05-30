@@ -24,17 +24,18 @@ export default function Navbar({ categories = [] }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setDesktopDropdownOpen(false);
   }, [pathname]);
 
   return (
     <nav
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ease-in-out ${
+      className={`sticky top-0 z-50 w-full transition-all duration-500 ease-in-out py-2.5 ${
         isScrolled 
-          ? "bg-white/85 backdrop-blur-md shadow-md border-b border-gray-100 py-1" 
-          : "bg-white border-b border-gray-100 py-3"
+          ? "bg-white/85 backdrop-blur-md shadow-md border-b border-gray-100" 
+          : "bg-white border-b border-gray-100"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,6 +76,7 @@ export default function Navbar({ categories = [] }) {
             >
               <Link
                 href="/products"
+                onClick={() => setDesktopDropdownOpen(false)}
                 className={`group flex items-center font-medium transition-colors hover:text-primary relative ${
                   pathname.startsWith("/products") ? "text-primary" : "text-text"
                 }`}
@@ -88,39 +90,132 @@ export default function Navbar({ categories = [] }) {
 
               {/* Animated Dropdown Menu */}
               <div 
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-white/95 backdrop-blur-xl shadow-2xl rounded-xl border border-gray-100 p-6 pt-5 grid grid-cols-2 gap-x-8 gap-y-4 transition-all duration-300 origin-top ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[980px] bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-gray-100 p-8 transition-all duration-300 origin-top ${
                   desktopDropdownOpen ? "opacity-100 scale-y-100 translate-y-2 pointer-events-auto" : "opacity-0 scale-y-95 translate-y-0 pointer-events-none"
                 }`}
               >
-                <div className="col-span-2 text-sm font-semibold text-gray-400 mb-1 border-b border-gray-100 pb-2 uppercase tracking-wider">
+                <div className="text-sm font-semibold text-gray-400 mb-6 border-b border-gray-100 pb-2 uppercase tracking-wider">
                   Our Collections
                 </div>
-                {categories.map((cat, idx) => (
-                  <Link
-                    key={cat.id}
-                    href={`/products/${cat.id}`}
-                    className="group/item flex items-center p-2 -m-2 rounded-lg hover:bg-light/10 transition-all duration-300"
-                    style={{ transitionDelay: `${idx * 20}ms` }}
-                  >
-                    <span className="text-xl mr-4 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:-rotate-6 text-primary/70 group-hover/item:text-primary">
-                      {(() => {
-  const IconComponent = icons[cat.icon] || icons.Gem;
-  return <IconComponent className="w-6 h-6" />;
-                      })()}
-                    </span>
-                    <div>
-                      <p className="font-medium text-text group-hover/item:text-primary transition-colors">
-                        {cat.name}
-                      </p>
+                {(() => {
+                  const categoryGroups = [
+                    {
+                      title: "Best Sellers",
+                      color: "from-amber-500 to-yellow-600",
+                      categoryIds: [
+                        "gemstone-bracelets",
+                        "orgone-pyramid",
+                        "gemstone-healing-wand",
+                        "tumbled-stones",
+                        "selenite-stone",
+                        "gemstone-tree",
+                        "pyramid-stone",
+                        "healing-crystals"
+                      ]
+                    },
+                    {
+                      title: "Spiritual & Healing",
+                      color: "from-purple-500 to-indigo-600",
+                      categoryIds: [
+                        "rudraksha",
+                        "jap-mala",
+                        "gemstone-angels",
+                        "shree-yantra",
+                        "gemstone-pendulum",
+                        "merkaba-star",
+                        "unique-products",
+                        "fancy-product",
+                        "crystal-shivling"
+                      ]
+                    },
+                    {
+                      title: "Home & Decor",
+                      color: "from-blue-500 to-teal-600",
+                      categoryIds: [
+                        "gemstone-ball",
+                        "rough-stone",
+                        "ganesh-statue",
+                        "statue",
+                        "crystal-diya",
+                        "crystal-flower",
+                        "crystal-flowers",
+                        "coster-plates",
+                        "zibu-coin",
+                        "vastu-accessories"
+                      ]
+                    },
+                    {
+                      title: "Jewelry & Accessories",
+                      color: "from-rose-500 to-pink-600",
+                      categoryIds: [
+                        "gemstone-pendant",
+                        "beads-string-8mm",
+                        "palm-stone",
+                        "gemstone-ring",
+                        "tumbled-bracelets",
+                        "chips-bracelets",
+                        "ladies-anklet",
+                        "roller-and-guasha",
+                        "crystal-rakhi",
+                        "crystal-heart-stone",
+                        "gemstone"
+                      ]
+                    }
+                  ];
+
+                  const groupedCategories = categoryGroups.map(group => {
+                    const items = categories.filter(cat => group.categoryIds.includes(cat.id));
+                    return { ...group, items };
+                  });
+
+                  const allGroupedIds = categoryGroups.flatMap(g => g.categoryIds);
+                  const leftoverCategories = categories.filter(cat => !allGroupedIds.includes(cat.id));
+                  if (leftoverCategories.length > 0) {
+                    groupedCategories[groupedCategories.length - 1].items.push(...leftoverCategories);
+                  }
+
+                  return (
+                    <div className="grid grid-cols-4 gap-8">
+                      {groupedCategories.map((group, idx) => (
+                        <div key={idx} className="space-y-4">
+                          <div className="flex items-center space-x-2 pb-2 border-b border-gray-100">
+                            <div className={`w-1.5 h-4 rounded-full bg-gradient-to-b ${group.color}`}></div>
+                            <h4 className="text-xs font-bold text-text uppercase tracking-wider">
+                              {group.title}
+                            </h4>
+                          </div>
+                          <div className="space-y-1.5 max-h-[300px] overflow-y-auto pr-1 scrollbar-thin">
+                            {group.items.map((cat) => (
+                              <Link
+                                key={cat.id}
+                                href={`/products/${cat.id}`}
+                                onClick={() => setDesktopDropdownOpen(false)}
+                                className="group/item flex items-center p-1.5 rounded-lg hover:bg-light/10 transition-colors"
+                              >
+                                <span className="text-primary/70 group-hover/item:text-primary mr-2.5 transition-colors shrink-0">
+                                  {(() => {
+                                    const IconComponent = icons[cat.icon] || icons.Gem;
+                                    return <IconComponent className="w-4 h-4" />;
+                                  })()}
+                                </span>
+                                <span className="font-medium text-text group-hover/item:text-primary transition-colors text-xs truncate">
+                                  {cat.name}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  </Link>
-                ))}
-                <div className="col-span-2 mt-4 pt-4 border-t border-gray-100 text-center">
+                  );
+                })()}
+                <div className="mt-6 pt-4 border-t border-gray-100 text-center">
                   <Link
                     href="/products"
-                    className="text-primary font-medium hover:text-gold transition-colors inline-flex items-center group/link"
+                    onClick={() => setDesktopDropdownOpen(false)}
+                    className="text-primary font-medium hover:text-gold transition-colors inline-flex items-center group/link text-sm"
                   >
-                    View All Products 
+                    View All Collections
                     <span className="ml-1 transform transition-transform group-hover/link:translate-x-1">&rarr;</span>
                   </Link>
                 </div>
@@ -160,9 +255,9 @@ export default function Navbar({ categories = [] }) {
               href="https://wa.me/919327105966"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center space-x-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 group"
+              className="flex items-center justify-center space-x-2 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent px-6 py-2.5 rounded-full font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300 shadow-sm hover:shadow-[0_4px_15px_rgba(37,211,102,0.2)] hover:-translate-y-0.5 group"
             >
-              <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+              <WhatsAppIcon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
               <span>Chat with Us</span>
             </a>
           </div>
@@ -261,9 +356,9 @@ export default function Navbar({ categories = [] }) {
               href="https://wa.me/919327105966"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full items-center justify-center space-x-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-5 py-4 rounded-xl font-bold transition-all shadow-md"
+              className="flex w-full items-center justify-center space-x-2.5 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent px-5 py-3.5 rounded-xl font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300"
             >
-              <WhatsAppIcon className="w-6 h-6" />
+              <WhatsAppIcon className="w-5 h-5" />
               <span>Chat with Us</span>
             </a>
           </div>

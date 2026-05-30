@@ -229,9 +229,9 @@ export default function Contact() {
                 href="https://wa.me/919327105966" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium transition-colors flex justify-center items-center shadow-md hover:shadow-lg"
+                className="w-full py-4 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent rounded-xl font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300 flex justify-center items-center shadow-sm hover:shadow-[0_4px_15px_rgba(37,211,102,0.15)] hover:-translate-y-0.5 group"
               >
-                <WhatsAppIcon className="w-6 h-6 mr-2" />
+                <WhatsAppIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Direct WhatsApp Chat
               </a>
             </div>

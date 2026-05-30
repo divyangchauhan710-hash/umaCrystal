@@ -1,11 +1,12 @@
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Outfit, Cinzel, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { getProducts } from "@/lib/productsService";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-cinzel" });
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-cormorant" });
 
 export const metadata = {
@@ -45,7 +46,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${cormorant.variable} font-body bg-background text-text antialiased flex flex-col min-h-screen`}>
+      <body className={`${outfit.variable} ${cinzel.variable} ${cormorant.variable} font-body bg-background text-text antialiased flex flex-col min-h-screen`}>
         <Navbar categories={categories} />
         <main className="flex-grow">
           {children}

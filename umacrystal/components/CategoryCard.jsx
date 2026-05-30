@@ -6,7 +6,7 @@ export default function CategoryCard({ category, large = false }) {
 
   return (
     <Link href={`/products/${category.id}`} className="block group">
-      <div className={`bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-1 relative overflow-hidden h-full flex flex-col ${large ? "min-h-[240px]" : ""}`}>
+      <div className={`bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition duration-300 ease-in-out hover:shadow-md hover:-translate-y-1 relative overflow-hidden h-full flex flex-col ${large ? "min-h-[240px]" : ""}`}>
         {/* Decorative corner */}
         <div className="absolute -top-10 -right-10 w-24 h-24 bg-light/10 rounded-full transition-transform duration-500 group-hover:scale-150"></div>
         

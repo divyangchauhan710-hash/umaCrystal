@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
   return (
     <>
       {/* Product Card */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 border border-gray-100 transition-all duration-300 ease-in-out flex flex-col h-full group">
+      <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 border border-gray-100 transition duration-300 ease-in-out flex flex-col h-full group">
         <div 
           className="relative aspect-square overflow-hidden bg-background cursor-pointer"
           onClick={() => setIsModalOpen(true)}
@@ -94,8 +94,24 @@ export default function ProductCard({ product }) {
             </button>
             
             {/* Image Section */}
-            <div className="w-full md:w-1/2 bg-background p-4">
-              <ImageGallery media={media} productName={product.name} />
+            <div className="w-full md:w-1/2 bg-background p-4 flex flex-col justify-between">
+              <div>
+                <ImageGallery media={media} productName={product.name} />
+              </div>
+              <div className="hidden md:block pt-6 mt-6 border-t border-gray-100">
+                <a 
+                  href={getWhatsAppLink(product.whatsappMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent rounded-full font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300 flex justify-center items-center shadow-sm hover:shadow-[0_4px_15px_rgba(37,211,102,0.15)] hover:-translate-y-0.5 group"
+                >
+                  <WhatsAppIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                  Request Quote via WhatsApp
+                </a>
+                <p className="text-center text-[11px] text-gray-400 mt-2">
+                  Clicking this button will open WhatsApp with a pre-filled message.
+                </p>
+              </div>
             </div>
             
             {/* Details Section */}
@@ -111,7 +127,7 @@ export default function ProductCard({ product }) {
               </div>
               
               <h4 className="font-semibold text-text mb-3">Specifications</h4>
-              <div className="bg-background rounded-lg p-4 mb-8 space-y-3">
+              <div className="bg-background rounded-lg p-4 mb-6 space-y-3">
                 {Object.entries(product.specs).map(([key, value]) => (
                   <div key={key} className="flex justify-between border-b border-gray-200 last:border-0 pb-2 last:pb-0">
                     <span className="text-gray-600">{key}</span>
@@ -120,14 +136,23 @@ export default function ProductCard({ product }) {
                 ))}
               </div>
               
-              <div className="mt-auto pt-4">
+              {product.description && (
+                <div className="mb-6">
+                  <h4 className="font-semibold text-text mb-3">Description</h4>
+                  <div className="text-sm text-gray-600 leading-relaxed whitespace-pre-line bg-gray-50 rounded-lg p-4 border border-gray-100 max-h-60 overflow-y-auto">
+                    {product.description}
+                  </div>
+                </div>
+              )}
+              
+              <div className="mt-auto pt-4 block md:hidden">
                 <a 
                   href={getWhatsAppLink(product.whatsappMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-full font-medium transition-colors flex justify-center items-center shadow-md hover:shadow-lg"
+                  className="w-full py-3.5 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent rounded-full font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300 flex justify-center items-center shadow-sm hover:shadow-[0_4px_15px_rgba(37,211,102,0.15)] hover:-translate-y-0.5 group"
                 >
-                  <WhatsAppIcon className="w-5 h-5 mr-2" />
+                  <WhatsAppIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                   Request Quote via WhatsApp
                 </a>
                 <p className="text-center text-xs text-gray-400 mt-3">
