@@ -133,7 +133,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50"
-                    placeholder="+91 93271 05966"
+                    placeholder="+91 95100 10383"
                   />
                 </div>
                 
@@ -185,7 +185,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-1">Phone</h4>
-                  <p className="text-gray-600">+91 93271 05966</p>
+                  <p className="text-gray-600">+91 95100 10383</p>
                 </div>
               </div>
               
@@ -226,7 +226,7 @@ export default function Contact() {
             
             <div className="mt-12 pt-8 border-t border-gray-200">
               <a 
-                href="https://wa.me/919327105966" 
+                href="https://wa.me/919510010383" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent rounded-xl font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300 flex justify-center items-center shadow-sm hover:shadow-[0_4px_15px_rgba(37,211,102,0.15)] hover:-translate-y-0.5 group"

@@ -252,7 +252,7 @@ export default function Navbar({ categories = [] }) {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center ml-4">
             <a
-              href="https://wa.me/919327105966"
+              href="https://wa.me/919510010383"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent px-6 py-2.5 rounded-full font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300 shadow-sm hover:shadow-[0_4px_15px_rgba(37,211,102,0.2)] hover:-translate-y-0.5 group"
@@ -353,7 +353,7 @@ export default function Navbar({ categories = [] }) {
 
           <div className="pt-6 pb-4">
             <a
-              href="https://wa.me/919327105966"
+              href="https://wa.me/919510010383"
               target="_blank"
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center space-x-2.5 bg-[#25D366]/10 border border-[#25D366]/40 text-[#1EBE5D] hover:bg-[#25D366] hover:text-white hover:border-transparent px-5 py-3.5 rounded-xl font-body font-semibold tracking-wider text-xs uppercase transition-all duration-300"

@@ -28,7 +28,7 @@ export default function Footer({ categories = [] }) {
               A fresh startup dedicated to premium gemstones and healing crystals. Crafted by nature, curated with passion. We represent a new generation of quality and transparency in the world of crystals.
             </p>
             <div className="flex space-x-4">
-              <a href="https://wa.me/919327105966" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
+              <a href="https://wa.me/919510010383" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
                 <WhatsAppIcon className="w-5 h-5 text-white" />
               </a>
               <a href="https://www.instagram.com/_umacrystal_?igsh=bW9jYnNqcHF4NDU4" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary transition-colors">
@@ -63,7 +63,7 @@ export default function Footer({ categories = [] }) {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <icons.Phone className="w-5 h-5 text-gold shrink-0" />
-                <span className="text-sm">+91 93271 05966</span>
+                <span className="text-sm">+91 95100 10383</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <icons.Mail className="w-5 h-5 text-gold shrink-0" />
