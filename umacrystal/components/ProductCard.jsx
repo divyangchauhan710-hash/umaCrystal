@@ -44,7 +44,7 @@ export default function ProductCard({ product }) {
             {product.name}
           </h3>
           <p className="text-gold font-semibold text-lg mb-3">
-            ₹ {product.price} <span className="text-sm font-normal text-gray-400">/ Piece</span>
+            ₹ {product.price} <span className="text-sm font-normal text-gray-400">/ {product.category_id === "tumbled-stones" ? "Kg" : "Piece"}</span>
           </p>
           
           <div className="space-y-1 mb-5 flex-grow">
@@ -123,7 +123,7 @@ export default function ProductCard({ product }) {
                 {product.name}
               </h2>
               <div className="text-2xl font-bold text-gold mb-6 border-b pb-6">
-                ₹ {product.price} <span className="text-lg font-normal text-gray-500">/ Piece</span>
+                ₹ {product.price} <span className="text-lg font-normal text-gray-500">/ {product.category_id === "tumbled-stones" ? "Kg" : "Piece"}</span>
               </div>
               
               <h4 className="font-semibold text-text mb-3">Specifications</h4>

@@ -125,10 +125,23 @@ function augmentProducts(data) {
         });
       }
       
+      const cleanSpecs = {};
+      if (product.specs) {
+        for (const [key, value] of Object.entries(product.specs)) {
+          cleanSpecs[key] = typeof value === "string" 
+            ? value.replace(/Divine Crystal Ocean/gi, "Uma Crystal") 
+            : value;
+        }
+      }
+
       return {
         ...product,
+        specs: cleanSpecs,
+        category_id: category.id,
         image: images[0],
-        media: media
+        media: media,
+        description: product.description?.replace(/Divine Crystal Ocean/gi, "Uma Crystal"),
+        whatsappMessage: product.whatsappMessage?.replace(/Divine Crystal Ocean/gi, "Uma Crystal")
       };
     });
     
