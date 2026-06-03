@@ -124,7 +124,7 @@ def main():
                 stone_desc = f" made of {stone_type}" if stone_type else ""
                 
                 # Build custom prompt
-                prompt = f"A premium, high-resolution product photograph of {product['name']}{stone_desc}{color_desc}{shape_desc}. Exact visual match to the reference image, studio lighting, clean solid white background, sharp focus, professional gemstone macro photography, highly detailed texture. Saved as high-quality JPG."
+                prompt = f"A premium, high-resolution product photograph of {product['name']}{stone_desc}{color_desc}{shape_desc}. Exact visual match to the reference image, preserving the original background style and details, studio lighting, sharp focus, professional gemstone macro photography, highly detailed texture. Saved as high-quality JPG."
 
                 
                 tasks.append({
