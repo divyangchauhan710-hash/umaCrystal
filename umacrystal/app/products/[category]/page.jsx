@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Sparkles } from "lucide-react";
 import CategoryProducts from "@/components/CategoryProducts";
 import { getProducts } from "@/lib/productsService";
@@ -23,7 +24,9 @@ export default async function CategoryPage({ params }) {
 
   return (
     <div className="bg-background min-h-screen pb-20">
-      <CategoryProducts categoryData={categoryData} />
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <CategoryProducts categoryData={categoryData} />
+      </Suspense>
     </div>
   );
 }

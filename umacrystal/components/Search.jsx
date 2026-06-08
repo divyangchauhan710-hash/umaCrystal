@@ -49,8 +49,12 @@ export default function Search({ categories = [] }) {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (query.trim()) {
-      // For now, we'll just close it, but could navigate to a search results page
+    if (results.length > 0) {
+      // Navigate to the first matching product directly
+      const firstResult = results[0];
+      router.push(`/products/${firstResult.categoryId}?product=${firstResult.id}`);
+      handleClose();
+    } else if (query.trim()) {
       handleClose();
     }
   };
@@ -119,7 +123,7 @@ export default function Search({ categories = [] }) {
                     {results.map((product) => (
                       <Link
                         key={product.id}
-                        href={`/products/${product.categoryId}`}
+                        href={`/products/${product.categoryId}?product=${product.id}`}
                         onClick={handleClose}
                         className="flex items-center p-3 rounded-2xl hover:bg-light/5 border border-transparent hover:border-gray-100 transition-all group"
                       >

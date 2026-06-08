@@ -1,13 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { X, Info } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import ImageGallery from "@/components/ImageGallery";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, autoOpen = false, scrollRef = null }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const cardRef = useRef(null);
+
+  // Auto-open modal and scroll into view when navigated from search
+  useEffect(() => {
+    if (autoOpen) {
+      // Small delay to let the page render first
+      const timer = setTimeout(() => {
+        const el = scrollRef?.current || cardRef.current;
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        // Open modal after scrolling
+        setTimeout(() => setIsModalOpen(true), 500);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [autoOpen, scrollRef]);
 
   const getWhatsAppLink = (message) => {
     return `https://wa.me/919510010383?text=${encodeURIComponent(message)}`;
@@ -20,7 +37,12 @@ export default function ProductCard({ product }) {
   return (
     <>
       {/* Product Card */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 border border-gray-100 transition duration-300 ease-in-out flex flex-col h-full group">
+      <div 
+        ref={cardRef}
+        className={`bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 border transition duration-300 ease-in-out flex flex-col h-full group ${
+          autoOpen ? 'border-gold ring-2 ring-gold/30 shadow-lg' : 'border-gray-100'
+        }`}
+      >
         <div 
           className="relative aspect-square overflow-hidden bg-background cursor-pointer"
           onClick={() => setIsModalOpen(true)}

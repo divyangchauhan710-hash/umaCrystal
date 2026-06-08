@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import { icons } from "@/lib/icons";
 
 export default function CategoryProducts({ categoryData }) {
   const [sortOrder, setSortOrder] = useState('default');
+  const searchParams = useSearchParams();
+  const highlightProductId = searchParams.get('product');
+  const highlightRef = useRef(null);
   
   const IconComponent = icons[categoryData.icon] || icons.Gem;
 
@@ -69,7 +73,12 @@ export default function CategoryProducts({ categoryData }) {
         {displayedProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {displayedProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard 
+                key={product.id} 
+                product={product} 
+                autoOpen={product.id === highlightProductId}
+                scrollRef={product.id === highlightProductId ? highlightRef : null}
+              />
             ))}
           </div>
         ) : (
